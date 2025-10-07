@@ -19,10 +19,20 @@ return [
 
     'allowed_methods' => ['*'],
 
-    // 'allowed_origins' => ['https://*.ngrok-free.app', 'http://localhost:9099', 'https://*.ngrok.app'],
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://epharma-front-ztcd.vercel.app',
+        'https://*.vercel.app',
+        'http://localhost:8080',
+        'http://localhost:9099',
+        'http://127.0.0.1:8080',
+        'http://127.0.0.1:9099',
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [
+        '/^https:\/\/.*\.vercel\.app$/',
+        '/^https:\/\/.*\.ngrok-free\.app$/',
+        '/^https:\/\/.*\.ngrok\.app$/',
+    ],
 
     'allowed_headers' => ['*'],
 
