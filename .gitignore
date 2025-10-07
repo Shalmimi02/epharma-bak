@@ -23,5 +23,3 @@ Homestead.json
 .phpunit.result.cache
 *.zip
 storage/.DS_Store
-/public
-/public/js

@@ -1,0 +1,5 @@
+{
+    "api_epharma_comptes": "https://api1.ngrok.app",
+    "api_epharma_stock": "https://api2.ngrok.app",
+    "api_epharma_ventes": "https://api3.ngrok.app"
+}

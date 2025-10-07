@@ -39,7 +39,7 @@ RUN mkdir -p storage/framework/sessions \
     storage/logs \
     bootstrap/cache
 
-RUN chmod -R 775 storage bootstrap/cache
+RUN chmod -R 775 storage bootstrap/cache public
 
 # Expose port
 EXPOSE 8080
