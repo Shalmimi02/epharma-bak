@@ -13,10 +13,10 @@ Ce guide vous explique comment déployer le backend Epharma sur Render.
 2. Cliquez sur "Get Started"
 3. Connectez-vous avec votre compte GitHub
 
-## Étape 2 : Créer une base de données MySQL
+## Étape 2 : Créer une base de données PostgreSQL
 
 1. Dans le dashboard Render, cliquez sur **"New +"**
-2. Sélectionnez **"MySQL"**
+2. Sélectionnez **"PostgreSQL"**
 3. Configurez :
    - **Name** : `epharma-db`
    - **Database** : `epharma`
@@ -67,12 +67,12 @@ APP_CSS=0.1
 LOG_CHANNEL=stack
 LOG_LEVEL=error
 
-DB_CONNECTION=mysql
-DB_HOST=[Hostname de votre base MySQL Render]
-DB_PORT=[Port de votre base MySQL Render]
+DB_CONNECTION=pgsql
+DB_HOST=[Hostname de votre base PostgreSQL Render]
+DB_PORT=[Port de votre base PostgreSQL Render]
 DB_DATABASE=epharma
 DB_USERNAME=epharma
-DB_PASSWORD=[Password de votre base MySQL Render]
+DB_PASSWORD=[Password de votre base PostgreSQL Render]
 
 CACHE_DRIVER=file
 SESSION_DRIVER=file
@@ -88,15 +88,15 @@ MAIL_FROM_ADDRESS=info@epharma.ga
 MAIL_FROM_NAME=Epharma
 ```
 
-**Note importante** : 
-- Remplacez `[Hostname de votre base MySQL Render]`, `[Port de votre base MySQL Render]`, et `[Password de votre base MySQL Render]` par les valeurs de votre base de données créée à l'étape 2
+**Note importante** :
+- Remplacez `[Hostname de votre base PostgreSQL Render]`, `[Port de votre base PostgreSQL Render]`, et `[Password de votre base PostgreSQL Render]` par les valeurs de votre base de données créée à l'étape 2
 - Pour `APP_KEY`, Render le générera automatiquement lors du build
 
 ## Étape 5 : Configuration des bases de données multiples (optionnel)
 
 Si vous avez besoin des bases comptes, stock, et ventes séparées :
 
-1. Créez 3 bases MySQL supplémentaires sur Render :
+1. Créez 3 bases PostgreSQL supplémentaires sur Render :
    - `epharma-comptes`
    - `epharma-stock`
    - `epharma-ventes`
