@@ -45,7 +45,8 @@ RUN chmod -R 775 storage bootstrap/cache
 EXPOSE 8080
 
 # Start server
-CMD php artisan key:generate --force && \
+CMD cp .env.example .env && \
+    php artisan key:generate --force && \
     php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
